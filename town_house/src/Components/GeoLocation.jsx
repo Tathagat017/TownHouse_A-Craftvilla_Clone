@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Text, Box } from "@chakra-ui/react";
+import {
+  Text,
+  Box,
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from "@chakra-ui/react";
 import { PrintLocation } from "./PrintLocation";
 
 export default function GetLocation() {
+  const [loading, setLoading] = useState(false);
   const [address, setAddress] = useState({
     road: "",
     neighbourhood: "",
@@ -22,18 +30,6 @@ export default function GetLocation() {
     const longitude = position.coords.longitude;
     console.log(latitude, longitude);
     return { lat: latitude, lng: longitude };
-  }
-
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition((position) => {
-      showPosition(position);
-      var received = getReverseLocation(
-        position.coords.latitude,
-        position.coords.longitude
-      );
-    });
-  } else {
-    console.log("Geolocation is not supported by this browser.");
   }
 
   function getReverseLocation(lat, lng) {
@@ -58,10 +54,41 @@ export default function GetLocation() {
           country: coords.country,
           continent: coords.continent,
         });
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
+        setLoading(false);
       });
+  }
+
+  function showAddress() {
+    if (navigator.geolocation) {
+      setLoading(true);
+      navigator.geolocation.getCurrentPosition((position) => {
+        showPosition(position);
+        var received = getReverseLocation(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+      });
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+  }
+
+  useEffect(() => {
+    alert("Location services are required ");
+    showAddress();
+  }, []);
+
+  if (loading) {
+    return (
+      <Alert status="info">
+        <AlertIcon />
+        Using Live location to present restraunts
+      </Alert>
+    );
   }
 
   return (

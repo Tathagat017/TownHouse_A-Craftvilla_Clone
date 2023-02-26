@@ -76,7 +76,7 @@ const NavBar = () => {
           />
         </Flex>
       </Box>
-      <Box display={isSmallScreen ? "none" : "block"}>
+      <Flex flex={4} mt={[2, 0]} mb={[2, 0]}>
         {/* <IconButton
           aria-label="icon"
           icon={<GetLocation />}
@@ -86,7 +86,7 @@ const NavBar = () => {
         {/* GEO LOCATION IS BELOW */}
         {/* <GetLocation /> */}
         {/* <GetLocation /> */}
-      </Box>
+      </Flex>
       <Flex justifyContent="flex-end" flex={1} mt={[2, 0]} mb={[2, 0]}>
         <RouterLink to="/Wishlist">
           <IconButton
@@ -97,28 +97,37 @@ const NavBar = () => {
             mr={[8, 4, 2, 2]}
           />
         </RouterLink>
-        <IconButton
-          aria-label="icon"
-          icon={
-            <Image src="GoldenCart.jpg" w="58px" h="50px" borderRadius="50%" />
-          }
-          size={iconSize}
-          variant="ghost"
-          borderRadius="50%"
-          // mr={[0, 0, 2, 2]}
-          mr={[8, 4, 2, 2]}
-        />
-        <IconButton
-          aria-label="icon"
-          // icon={<AvatarWithRipple />}
-          icon={
-            <Image src="GoldenLogin4.jpg" w="56px" borderRadius="50%"></Image>
-          }
-          size={iconSize}
-          variant="ghost"
-          borderRadius="50%"
-          mr={[8, 4, 2, 2]}
-        />
+        <RouterLink to="/Cart">
+          <IconButton
+            aria-label="icon"
+            icon={
+              <Image
+                src="GoldenCart.jpg"
+                w="58px"
+                h="50px"
+                borderRadius="50%"
+              />
+            }
+            size={iconSize}
+            variant="ghost"
+            borderRadius="50%"
+            // mr={[0, 0, 2, 2]}
+            mr={[8, 4, 2, 2]}
+          />
+        </RouterLink>
+        <RouterLink to="/Login">
+          <IconButton
+            aria-label="icon"
+            // icon={<AvatarWithRipple />}
+            icon={
+              <Image src="GoldenLogin4.jpg" w="56px" borderRadius="50%"></Image>
+            }
+            size={iconSize}
+            variant="ghost"
+            borderRadius="50%"
+            mr={[8, 4, 2, 2]}
+          />
+        </RouterLink>
       </Flex>
     </Flex>
   );
