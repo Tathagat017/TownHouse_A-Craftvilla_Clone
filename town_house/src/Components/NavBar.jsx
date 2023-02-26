@@ -1,28 +1,27 @@
-import React from "react";
 import {
-  ChakraProvider,
+  Box,
   Flex,
-  Input,
   IconButton,
   Image,
-  Box,
+  Input,
+  useBreakpointValue,
 } from "@chakra-ui/react";
-
-import { Link as RouterLink } from "react-router-dom";
 import { SearchIcon } from "@chakra-ui/icons";
-import { AvatarWithRipple } from "./Avtar";
-import Cart from "./../Pages/Cart";
-import Wishlist from "./../Pages/Wishlist";
+import { Link as RouterLink } from "react-router-dom";
 import GetLocation from "./GeoLocation";
 
 const NavBar = () => {
+  const isSmallScreen = useBreakpointValue({ base: true, md: false });
+  const iconSize = isSmallScreen ? "sm" : "md";
+  const imageSize = isSmallScreen ? "70px" : "100px";
+
   return (
     <Flex
       alignItems="center"
-      p={2}
+      p={[1, 2, 2, 2]}
       overflow="visible"
-      fontSize="xs"
-      lineHeight={5}
+      fontSize={["sm", "sm", "xs", "xs"]}
+      lineHeight={[6, 5, 5, 5]}
       letterSpacing="wide"
       backgroundColor="aliceblue"
       border={0}
@@ -33,12 +32,13 @@ const NavBar = () => {
       color="#000000"
       bgGradient="linear(to top, purple.300,whiteAlpha.900,yellow.200)"
       justifyContent="space-between"
+      flexWrap="wrap"
     >
       <RouterLink to="/">
         <Image
-          height="120px"
-          width="120px"
-          borderRadius={15}
+          height={imageSize}
+          width={imageSize}
+          borderRadius={"25%"}
           display="inline-block"
           mr={5}
           opacity={1}
@@ -47,64 +47,66 @@ const NavBar = () => {
           margin="auto"
         />
       </RouterLink>
-      <Flex>
-        <Input
-          variant="filled"
-          width="100%"
-          placeholder="Search Town House"
-          size="md"
-          display="flex"
-          mr="0"
-          color="purple.500"
-        />
-        <IconButton
+      <Box
+        width={["100%", "100%", "auto", "auto"]} // adjust width for different screen sizes
+        mt={[2, 2, 0, 0]}
+        mr={[2, 2, 1, 1]}
+        ml={[4, 4, 4, 4]}
+        mb={[2, 2, 0, 0]}
+      >
+        <Flex flex={1} justifyContent="center" mt={[2, 0]} mb={[2, 0]}>
+          <Input
+            variant="filled"
+            width="100%"
+            placeholder="Search Town House"
+            size={["sm", "md", "md", "md"]}
+            display="flex"
+            mr={[0, 0, 2, 2]}
+            color="purple.500"
+          />
+          <IconButton
+            aria-label="icon"
+            icon={<SearchIcon />}
+            size={iconSize}
+            variant="ghost"
+            border={0}
+            borderRadius={5}
+            ml={isSmallScreen ? "-30px" : "-50px"}
+            colorScheme="gray"
+          />
+        </Flex>
+      </Box>
+      <Box display={isSmallScreen ? "none" : "block"}>
+        {/* <IconButton
           aria-label="icon"
-          icon={<SearchIcon />}
+          icon={<GetLocation />}
           size="md"
           variant="ghost"
-          border={0}
-          borderRadius={5}
-          ml={-50}
-          colorScheme="gray"
-        />
-      </Flex>
-      <>
-        <Box>
-          {/* <IconButton
-            aria-label="icon"
-            icon={<GetLocation />}
-            size="md"
-            variant="ghost"
-          /> */}
-
-          {/* GEO LOCATION IS BELOW */}
-          {/* <GetLocation /> */}
-        </Box>
-      </>
-      <Flex justifyContent="space-between" w="80">
+        /> */}
+        {/* GEO LOCATION IS BELOW */}
+        {/* <GetLocation /> */}
+        {/* <GetLocation /> */}
+      </Box>
+      <Flex justifyContent="flex-end" flex={1} mt={[2, 0]} mb={[2, 0]}>
         <RouterLink to="/Wishlist">
           <IconButton
             aria-label="icon"
-            icon={
-              <Image src="GoldenCart1.jpg" w="56px" borderRadius="50%"></Image>
-            }
-            size="md"
+            icon={<Image src="GoldenCart1.jpg" w="56px" borderRadius="50%" />}
+            size={iconSize}
             variant="ghost"
+            mr={[8, 4, 2, 2]}
           />
         </RouterLink>
         <IconButton
           aria-label="icon"
           icon={
-            <Image
-              src="GoldenCart.jpg"
-              w="58px"
-              h="50px"
-              borderRadius="50%"
-            ></Image>
+            <Image src="GoldenCart.jpg" w="58px" h="50px" borderRadius="50%" />
           }
-          size="md"
+          size={iconSize}
           variant="ghost"
           borderRadius="50%"
+          // mr={[0, 0, 2, 2]}
+          mr={[8, 4, 2, 2]}
         />
         <IconButton
           aria-label="icon"
@@ -112,9 +114,10 @@ const NavBar = () => {
           icon={
             <Image src="GoldenLogin4.jpg" w="56px" borderRadius="50%"></Image>
           }
-          size="md"
+          size={iconSize}
           variant="ghost"
           borderRadius="50%"
+          mr={[8, 4, 2, 2]}
         />
       </Flex>
     </Flex>

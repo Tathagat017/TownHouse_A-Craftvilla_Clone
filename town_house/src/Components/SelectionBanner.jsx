@@ -46,7 +46,7 @@ export default function Simple() {
 
   return (
     <>
-      <Box bg={useColorModeValue("red.50", "blackAlpha.100")} px={4}>
+      <Box bg={useColorModeValue("purple.50", "blackAlpha.100")} px={4}>
         <Flex
           h={16}
           alignItems={"center"}

@@ -1,0 +1,18 @@
+.carauselText {
+  font-size: 1rem; /* default font size */
+}
+
+@media (max-width: 720px) {
+  .carauselText {
+    font-size: 1em; /* smaller font size for smaller screens */
+  }
+}
+.carauselTryImage {
+  height: 30vh; /* default image size */
+}
+
+@media (max-width: 720px) {
+  .carauselTryImage {
+    height: 20vh; /* smaller image size for smaller screens */
+  }
+}

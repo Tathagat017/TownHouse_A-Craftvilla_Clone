@@ -1,115 +1,100 @@
-import React, { useState } from "react";
-import { Box, IconButton, useBreakpointValue } from "@chakra-ui/react";
-// Here we have used react-icons package for the icons
-import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
-// And react-slick as our Carousel Lib
-import Slider from "react-slick";
+import React, { useRef, useState, useEffect } from "react";
 import axios from "axios";
-// Settings for the slider
-const settings = {
-  dots: true,
-  arrows: false,
-  fade: true,
-  infinite: true,
-  autoplay: true,
-  speed: 500,
-  autoplaySpeed: 5000,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-};
-
-export default function Carousel() {
-  // As we have used custom buttons, we need a reference variable to
-  // change the state
-  const [slider, setSlider] = useState(null);
-
-  // These are the breakpoints which changes the position of the
-  // buttons as the screen size changes
-  const top = useBreakpointValue({ base: "90%", md: "50%" });
-  const side = useBreakpointValue({ base: "30%", md: "10px" });
-
-  const options = {
-    method: "GET",
-    url: "https://yallah_home.p.rapidapi.com/",
-    headers: {
-      "Content-Type": "application/json",
-      "X-RapidAPI-Key": "9d3082a174msh33fc0ccdefbb257p1ca7a7jsn7287bf4f5c9d",
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+import "swiper/css/scrollbar";
+import { useNavigate } from "react-router";
+// import "./swiperStyle.css";
+export const Crousel2 = () => {
+  const navigate = useNavigate();
+  const arr = [
+    {
+      title: "Personal Products and Beauty",
+      image: "https://cdn.plotch.io/image/upload/C/V/1676285392_My5wbmc=.png",
+      url: "/personalProducts",
     },
-  };
-
-  axios
-    .request(options)
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
-
-  // These are the images used in the slide
-  const cards = [{}];
-
+    {
+      title: "Kurta",
+      image: "https://cdn.plotch.io/image/upload/C/V/1676285387_Mi5wbmc=.png",
+      url: "/WomenKurta",
+    },
+    {
+      title: "Idols",
+      image: "https://cdn.plotch.io/image/upload/C/V/1676285421_OC5wbmc=.png",
+      url: "/Idols",
+    },
+    {
+      title: "Ceramic Mugs",
+      image: "https://cdn.plotch.io/image/upload/C/V/1676285414_Ny5wbmc=.png",
+      url: "/CeramicMugs",
+    },
+    {
+      title: "Saree",
+      image: "https://cdn.plotch.io/image/upload/C/V/1676285382_MS5wbmc=.png",
+      url: "/Saree",
+    },
+    {
+      title: "Home Decor",
+      image: "https://cdn.plotch.io/image/upload/C/V/1676285398_NC5wbmc=.png",
+      url: "/HomeDecor",
+    },
+    {
+      title: "Kitchen Ware",
+      image: "https://cdn.plotch.io/image/upload/C/V/1676285409_Ni5wbmc=.png",
+      url: "/HomeDecor",
+    },
+    {
+      title: "Tote Bags",
+      image: "https://cdn.plotch.io/image/upload/C/V/1676285404_NS5wbmc=.png",
+      url: "/ToteBags",
+    },
+  ];
   return (
-    <Box
-      position={"relative"}
-      height={"600px"}
-      width={"full"}
-      overflow={"hidden"}
-    >
-      {/* CSS files for react-slick */}
-      <link
-        rel="stylesheet"
-        type="text/css"
-        charSet="UTF-8"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
-      {/* Left Icon */}
-      <IconButton
-        aria-label="left-arrow"
-        colorScheme="messenger"
-        borderRadius="full"
-        position="absolute"
-        left={side}
-        top={top}
-        transform={"translate(0%, -50%)"}
-        zIndex={2}
-        onClick={() => slider?.slickPrev()}
+    <div className="App">
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        navigation
+        pagination={{ clickable: true }}
+        breakpoints={{
+          220: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+          },
+          720: {
+            slidesPerView: 3,
+            spaceBetween: 35,
+          },
+
+          1200: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }}
       >
-        <BiLeftArrowAlt />
-      </IconButton>
-      {/* Right Icon */}
-      <IconButton
-        aria-label="right-arrow"
-        colorScheme="messenger"
-        borderRadius="full"
-        position="absolute"
-        right={side}
-        top={top}
-        transform={"translate(0%, -50%)"}
-        zIndex={2}
-        onClick={() => slider?.slickNext()}
-      >
-        <BiRightArrowAlt />
-      </IconButton>
-      {/* Slider */}
-      <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        {cards.map((url, index) => (
-          <Box
-            key={index}
-            height={"6xl"}
-            position="relative"
-            backgroundPosition="center"
-            backgroundRepeat="no-repeat"
-            backgroundSize="cover"
-            backgroundImage={`url(${url})`}
-          />
-        ))}
-      </Slider>
-    </Box>
+        {/* https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixi60d=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60 */}
+        {arr &&
+          arr?.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div>
+                  <img
+                    style={{ cursor: "pointer" }}
+                    src={item.image}
+                    alt={index}
+                    onClick={() => navigate("/products")}
+                  />
+                  <h2>{item.title}</h2>
+                  <br></br>
+                  <h4>{item.distance}</h4>
+                </div>
+              </SwiperSlide>
+            );
+          })}
+      </Swiper>
+    </div>
   );
-}
+};

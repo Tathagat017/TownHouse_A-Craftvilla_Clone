@@ -1,0 +1,30 @@
+@media only screen and (min-width: 320px) {
+  .ImageBanner {
+    width: 100vw;
+    height: 49vh;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .ImageBanner {
+    width: 100vw;
+    height: 55vh;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .ImageBanner {
+    width: 100vw;
+    height: 55vh;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .ImageBanner {
+    width: 100vw;
+    height: 55vh;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .ImageBanner {
+    width: 100vw;
+    height: 55vh;
+  }
+}
