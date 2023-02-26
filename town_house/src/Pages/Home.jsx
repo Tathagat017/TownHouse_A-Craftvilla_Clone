@@ -9,8 +9,8 @@ export default function Home() {
     <>
       <NavBar />
       <Simple />
-      <CaptionCarousel />
       <Carousel />
+      <CaptionCarousel />
       <LargeWithNewsletter />
     </>
   );
