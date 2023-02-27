@@ -1,28 +1,36 @@
-# pricey-secretary-8466
-
+TownHouse : A Clone of Craftsvilla
 Clone website of Craftvilla
 
 netlify deploy link : https://rct101prjecttathagat.netlify.app/
 
-Salient Features : 
+Salient Features :
+
+A website built for catering the needs to people who wish to purhchase quality exotic products such as handicrafts etc
 
 Tech Stack : JS,HTML , CSS, React.js
 
-1. Completely responsive website capable of seamless rendering screens of all sizes.
+Completely responsive website capable of seamless rendering screens of all sizes.
 
-2. Uses geolocation API and OpenCage API for real time location data. 
+Uses geolocation API and OpenCage API for real time location data.
 
-3. Uses React Hooks, reaact-router-dom for navigation and routes
+Uses React Hooks, reaact-router-dom for navigation and routes
 
-4. Chakra UI used for CSS react front end styling 
+Chakra UI used for CSS react front end styling
 
-5. Filtering , sorting , search, cart and wishlist fucntionality
+Filtering , sorting , search, cart and wishlist fucntionality
 
-6.Login with protected routes : cart and wishlist : Authentication 
+6.Login with protected routes : cart and wishlist : Authentication
 
 7.Payment Page
 
-
-
-
-
+API Reference
+Get all items
+  GET /api/items
+Parameter	Type	Description
+api_key	string	Required. Your API key
+Get item
+  GET /api/items/${id}
+Parameter	Type	Description
+id	string	Required. Id of item to fetch
+add(num1, num2)
+Takes two numbers and returns the sum.
