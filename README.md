@@ -9,6 +9,8 @@ A website built for catering the needs to people who wish to purhchase quality e
 
 Tech Stack : JS,HTML , CSS, React.js,puppeteer library for web scrapping
 
+Documentation referred :- https://github.com/puppeteer/puppeteer , https://chakra-ui.com/getting-started , https://beta.reactjs.org/ ,https://nukeop.github.io/react-ui-cards,github.com/nolimits4web/Swiper,github.com/react-icons/react-icons, github.com/remix-run/react-router,github.com/axios/axios
+
 Completely responsive website capable of seamless rendering screens of all sizes.
 
 Uses geolocation API and OpenCage API for real time location data.
