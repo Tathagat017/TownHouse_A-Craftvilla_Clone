@@ -87,7 +87,9 @@ function SingleProduct() {
   }
   return (
     <>
-      <NavBar />
+      <Box>
+        <NavBar />
+      </Box>
       <Flex p={50} w="full" alignItems="center" justifyContent="center">
         <Box
           bg={("whiteAlpha.400", "gray.800")}

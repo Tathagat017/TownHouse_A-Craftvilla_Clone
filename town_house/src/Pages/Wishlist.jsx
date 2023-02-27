@@ -10,7 +10,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-export default function Cart() {
+export default function Wishlist() {
   const { cart, wishlist } = useContext(cartContext);
   console.log(cart);
   return (
