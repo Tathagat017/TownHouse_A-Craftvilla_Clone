@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import {
   Flex,
   Circle,
@@ -9,6 +10,7 @@ import {
   Icon,
   chakra,
   Tooltip,
+  Button,
 } from "@chakra-ui/react";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
@@ -149,6 +151,9 @@ function SingleProduct() {
                   Rs
                 </Box>
                 {restraunt.price}
+                <RouterLink to="/Cart">
+                  <Button>Proceed to Cart</Button>
+                </RouterLink>
               </Box>
             </Flex>
           </Box>

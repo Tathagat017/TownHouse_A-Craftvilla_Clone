@@ -12,8 +12,9 @@ import {
   Button,
   SimpleGrid,
 } from "@chakra-ui/react";
-
+import { Link as RouterLink, Navigate, useNavigate } from "react-router-dom";
 export default function Cart() {
+  const navigate = useNavigate();
   const { cart, wishlist } = useContext(cartContext);
   console.log(cart);
   return (
@@ -87,7 +88,14 @@ export default function Cart() {
                     <Text textDecoration={"line-through"} color={"gray.600"}>
                       {el.quantity}
                     </Text>
-                    <Button _hover={{ colorScheme: "red" }}>Buy Now</Button>
+                    <Button
+                      _hover={{ colorScheme: "red" }}
+                      onClick={() => {
+                        window.location.assign("http://localhost:3000/payment");
+                      }}
+                    >
+                      Buy Now
+                    </Button>
                   </Stack>
                 </Stack>
               </Box>
