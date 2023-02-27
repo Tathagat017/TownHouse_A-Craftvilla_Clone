@@ -18,4 +18,9 @@ Salient Features :
 
 6.Login with protected routes : cart and wishlist
 
+7.Payment Page
+
+
+
+
 
