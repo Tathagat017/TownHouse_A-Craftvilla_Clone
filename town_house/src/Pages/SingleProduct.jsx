@@ -17,8 +17,9 @@ import { FiShoppingCart } from "react-icons/fi";
 import NavBar from "./../Components/NavBar";
 import LargeWithNewsletter from "./../Components/Footer";
 import { cartContext } from "../Components/CartContext";
-
+import { useToast } from "@chakra-ui/react";
 function SingleProduct() {
+  const toast = useToast();
   function Rating({ rating, numReviews = 100 }) {
     return (
       <Flex alignItems="center">
@@ -152,7 +153,19 @@ function SingleProduct() {
                 </Box>
                 {restraunt.price}
                 <RouterLink to="/Cart">
-                  <Button>Proceed to Cart</Button>
+                  <Button
+                    onClick={() => {
+                      toast({
+                        title: "Added to Cart",
+                        description: "Product added to Cart",
+                        status: "success",
+                        duration: 9000,
+                        isClosable: true,
+                      });
+                    }}
+                  >
+                    Proceed to Cart
+                  </Button>
                 </RouterLink>
               </Box>
             </Flex>
