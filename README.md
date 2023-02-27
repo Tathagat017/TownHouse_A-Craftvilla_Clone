@@ -6,6 +6,8 @@ netlify deploy link : https://rct101prjecttathagat.netlify.app/
 
 Salient Features : 
 
+Tech Stack : JS,HTML , CSS, React.js
+
 1. Completely responsive website capable of seamless rendering screens of all sizes.
 
 2. Uses geolocation API and OpenCage API for real time location data. 
@@ -16,7 +18,7 @@ Salient Features :
 
 5. Filtering , sorting , search, cart and wishlist fucntionality
 
-6.Login with protected routes : cart and wishlist
+6.Login with protected routes : cart and wishlist : Authentication 
 
 7.Payment Page
 
