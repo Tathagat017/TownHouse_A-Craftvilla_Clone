@@ -9,6 +9,7 @@ import Wishlist from "./../Pages/Wishlist";
 import NotFound from "./../Pages/NotFound";
 import NewUser from "./../Pages/NewUser";
 import PrivateRoute from "./PrivateRoute";
+import SingleProduct from "./../Pages/SingleProduct";
 
 export const AllRoutes = () => {
   return (
@@ -33,6 +34,7 @@ export const AllRoutes = () => {
           </PrivateRoute>
         }
       ></Route>
+      <Route path="/products/:id" element={<SingleProduct />}></Route>
       <Route path="*" element={<NotFound />}></Route>
       <Route path="newUser" element={<NewUser />}></Route>
     </Routes>

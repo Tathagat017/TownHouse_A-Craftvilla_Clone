@@ -16,7 +16,6 @@ import {
   Button,
   Heading,
   Text,
-  useColorModeValue,
 } from "@chakra-ui/react";
 
 function Login() {
@@ -90,15 +89,14 @@ function Login() {
         minH={"100vh"}
         align={"center"}
         justify={"center"}
-        bg={useColorModeValue(
-          "linear-gradient(#e66465, #9198e5)",
-          "purple.800"
-        )}
+        bg={("linear-gradient(#e66465, #9198e5)", "purple.800")}
       >
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
-            <Heading fontSize={"4xl"}>Sign in to Town House</Heading>
-            <Text fontSize={"lg"} color={"gray.600"}>
+            <Heading fontSize={"4xl"} color={"whiteAlpha.900"}>
+              Sign in to Town House
+            </Heading>
+            <Text fontSize={"lg"} color={"whiteAlpha.900"}>
               Or Sign Up{" "}
               <RouterLink to="/newUser" color={"blue.400"}>
                 New User
@@ -106,12 +104,7 @@ function Login() {
               ✌️
             </Text>
           </Stack>
-          <Box
-            rounded={"lg"}
-            bg={useColorModeValue("white", "gray.700")}
-            boxShadow={"lg"}
-            p={8}
-          >
+          <Box rounded={"lg"} bg={("white", "gray.700")} boxShadow={"lg"} p={8}>
             <Stack spacing={4}>
               <FormControl id="email">
                 <FormLabel>Email address</FormLabel>

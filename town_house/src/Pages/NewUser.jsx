@@ -16,7 +16,6 @@ import {
   Button,
   Heading,
   Text,
-  useColorModeValue,
   Link,
 } from "@chakra-ui/react";
 
@@ -98,7 +97,7 @@ export default function NewUser() {
         minH={"100vh"}
         align={"center"}
         justify={"center"}
-        bg={useColorModeValue("blackAlpha.100", "gray.800")}
+        bg={("blackAlpha.100", "gray.800")}
       >
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
@@ -109,12 +108,7 @@ export default function NewUser() {
               to enjoy all of our cool features ✌️
             </Text>
           </Stack>
-          <Box
-            rounded={"lg"}
-            bg={useColorModeValue("white", "gray.700")}
-            boxShadow={"lg"}
-            p={8}
-          >
+          <Box rounded={"lg"} bg={("white", "gray.700")} boxShadow={"lg"} p={8}>
             <Stack spacing={4}>
               <HStack>
                 <Box>
