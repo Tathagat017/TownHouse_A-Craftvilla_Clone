@@ -29,8 +29,8 @@ OpenCage for Location decoding
 
 
 
-Json server deployed via cyclic : https://sore-pink-giraffe-cuff.cyclic.app
-
+Json server deployed via cyclic : https://sore-pink-giraffe-cuff.cyclic.app 
+refernce : https://youtu.be/sT7UBnhV6Vo : Problem Solver(NHT) documentation : https://github.com/ayaznoori/json-mock
 
 api_key	string	Required. 
 
