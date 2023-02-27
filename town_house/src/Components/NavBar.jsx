@@ -26,13 +26,19 @@ const NavBar = () => {
       backgroundColor="aliceblue"
       border={0}
       borderRadius={0}
-      opacity={0.81}
+      zIndex="999"
+      opacity={"1"}
       boxShadow=" rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;"
       flexDirection="row"
       color="#000000"
       bgGradient="linear(to top, purple.300,whiteAlpha.900,yellow.200)"
       justifyContent="space-between"
       flexWrap="wrap"
+      sx={{
+        position: "-webkit-sticky",
+        /* Safari */ position: "sticky",
+        top: "0",
+      }}
     >
       <RouterLink to="/">
         <Image
