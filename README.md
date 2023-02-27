@@ -24,9 +24,13 @@ Filtering , sorting , search, cart and wishlist fucntionality
 7.Payment Page
 
 API Reference
-Get all items
-  GET /api/items
-Parameter	Type	Description
+
+OpenCage for Location decoding 
+
+
+Json server deployed via cyclic : https://sore-pink-giraffe-cuff.cyclic.app
+
+
 api_key	string	Required. Your API key
 Get item
   GET /api/items/${id}
