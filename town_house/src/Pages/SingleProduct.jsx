@@ -29,7 +29,7 @@ function SingleProduct() {
                 <BsStarFill
                   key={i}
                   style={{ marginLeft: "1" }}
-                  color={i < rating ? "teal.500" : "gray.300"}
+                  color={i < rating ? "whiteAlpha.500" : "gray.300"}
                 />
               );
             }
@@ -38,7 +38,7 @@ function SingleProduct() {
             }
             return <BsStar key={i} style={{ marginLeft: "1" }} />;
           })}
-        <Box as="span" ml="2" color="gray.600" fontSize="sm">
+        <Box as="span" ml="2" color="whiteAlpha.400" fontSize="sm">
           {numReviews} review{numReviews > 1 && "s"}
         </Box>
       </Flex>
@@ -87,7 +87,7 @@ function SingleProduct() {
       <NavBar />
       <Flex p={50} w="full" alignItems="center" justifyContent="center">
         <Box
-          bg={("white", "gray.800")}
+          bg={("whiteAlpha.400", "gray.800")}
           maxW="sm"
           borderWidth="1px"
           rounded="lg"

@@ -5,6 +5,7 @@ import NavBar from "./../Components/NavBar";
 import Simple from "./../Components/SelectionBanner";
 import LargeWithNewsletter from "./../Components/Footer";
 import TopFilterPanel from "./../Components/TopFilterPanel";
+import { Link as RouterLink } from "react-router-dom";
 import {
   Box,
   Flex,
@@ -135,55 +136,57 @@ export default function Product({ category }) {
             <SimpleGrid className="main_container" columns={4} spacing={10}>
               {state.data?.map((el) => {
                 return (
-                  <Box
-                    className="catsDetails"
-                    key={el.id}
-                    maxW="xs"
-                    borderWidth="1px"
-                    borderRadius="lg"
-                    overflow="hidden"
-                  >
-                    <Center>
-                      <Img src={el.image} boxSize="xs" alt={el.name} />
-                    </Center>
+                  <RouterLink to={`/products/${el.id}`}>
+                    <Box
+                      className="catsDetails"
+                      key={el.id}
+                      maxW="xs"
+                      borderWidth="1px"
+                      borderRadius="lg"
+                      overflow="hidden"
+                    >
+                      <Center>
+                        <Img src={el.image} boxSize="xs" alt={el.name} />
+                      </Center>
 
-                    <VStack spacing={2} p={2}>
-                      <Text
-                        className="name"
-                        fontSize={"20px"}
-                        fontWeight="bold"
-                        objectFit="cover"
-                      >
-                        Product Name:{el.title}
-                      </Text>
-                      <Text className="brand">Brand:{el.brand}</Text>
-                      <Text className="cost">Price:{el.price}</Text>
-                      <Text className="rating">rating:{el.ratings}</Text>
-                      <Text className="discount">Discount:{el.discount}</Text>
-                      {el.description ? (
-                        <Text className="description">
-                          Description:{el.description}
+                      <VStack spacing={2} p={2}>
+                        <Text
+                          className="name"
+                          fontSize={"20px"}
+                          fontWeight="bold"
+                          objectFit="cover"
+                        >
+                          Product Name:{el.title}
                         </Text>
-                      ) : (
-                        ""
-                      )}
+                        <Text className="brand">Brand:{el.brand}</Text>
+                        <Text className="cost">Price:{el.price}</Text>
+                        <Text className="rating">rating:{el.ratings}</Text>
+                        <Text className="discount">Discount:{el.discount}</Text>
+                        {el.description ? (
+                          <Text className="description">
+                            Description:{el.description}
+                          </Text>
+                        ) : (
+                          ""
+                        )}
 
-                      <Button
-                        className="AddToCart"
-                        colorScheme={"red"}
-                        onClick={() => handleAddtoCart(el)}
-                      >
-                        Add to Cart
-                      </Button>
-                      <Button
-                        className="AddToWishlist"
-                        colorScheme={"red"}
-                        onClick={() => handleAddtoWishlist(el)}
-                      >
-                        Add to Wishlist
-                      </Button>
-                    </VStack>
-                  </Box>
+                        <Button
+                          className="AddToCart"
+                          colorScheme={"red"}
+                          onClick={() => handleAddtoCart(el)}
+                        >
+                          Add to Cart
+                        </Button>
+                        <Button
+                          className="AddToWishlist"
+                          colorScheme={"red"}
+                          onClick={() => handleAddtoWishlist(el)}
+                        >
+                          Add to Wishlist
+                        </Button>
+                      </VStack>
+                    </Box>
+                  </RouterLink>
                 );
               })}
             </SimpleGrid>
