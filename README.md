@@ -7,7 +7,7 @@ Salient Features :
 
 A website built for catering the needs to people who wish to purhchase quality exotic products such as handicrafts etc
 
-Tech Stack : JS,HTML , CSS, React.js
+Tech Stack : JS,HTML , CSS, React.js,puppeteer library for web scrapping
 
 Completely responsive website capable of seamless rendering screens of all sizes.
 
@@ -28,13 +28,18 @@ API Reference
 OpenCage for Location decoding 
 
 
+
 Json server deployed via cyclic : https://sore-pink-giraffe-cuff.cyclic.app
 
 
-api_key	string	Required. Your API key
+api_key	string	Required. 
+
+
 Get item
   GET /api/items/${id}
+  
 Parameter	Type	Description
+
 id	string	Required. Id of item to fetch
-add(num1, num2)
-Takes two numbers and returns the sum.
+
+
