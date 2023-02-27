@@ -10,7 +10,7 @@ import NotFound from "./../Pages/NotFound";
 import NewUser from "./../Pages/NewUser";
 import PrivateRoute from "./PrivateRoute";
 import SingleProduct from "./../Pages/SingleProduct";
-
+import Payment from "../Components/Payment";
 export const AllRoutes = () => {
   return (
     <Routes>
@@ -37,6 +37,7 @@ export const AllRoutes = () => {
       <Route path="/products/:id" element={<SingleProduct />}></Route>
       <Route path="*" element={<NotFound />}></Route>
       <Route path="newUser" element={<NewUser />}></Route>
+      <Route path="/payment" element={<Payment />}></Route>
     </Routes>
   );
 };

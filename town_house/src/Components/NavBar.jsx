@@ -91,7 +91,7 @@ const NavBar = () => {
         /> */}
         {/* GEO LOCATION IS BELOW */}
         {/* <GetLocation /> */}
-        {/* <GetLocation /> */}
+        <GetLocation />
       </Flex>
       <Flex justifyContent="flex-end" flex={1} mt={[2, 0]} mb={[2, 0]}>
         <RouterLink to="/Wishlist">

@@ -12,8 +12,9 @@ import {
   Button,
   SimpleGrid,
 } from "@chakra-ui/react";
-
+import { Link as RouterLink, Navigate, useNavigate } from "react-router-dom";
 export default function Cart() {
+  const navigate = useNavigate();
   const { cart, wishlist } = useContext(cartContext);
   console.log(cart);
   return (
@@ -28,7 +29,7 @@ export default function Cart() {
                 p={6}
                 maxW={"330px"}
                 w={"full"}
-                bg={("white", "gray.800")}
+                bg={("whiteAlpha.400", "gray.800")}
                 boxShadow={"2xl"}
                 rounded={"lg"}
                 pos={"relative"}
@@ -67,7 +68,7 @@ export default function Cart() {
                 </Box>
                 <Stack pt={10} align={"center"}>
                   <Text
-                    color={"gray.500"}
+                    color={"whiteAlpha.400"}
                     fontSize={"sm"}
                     textTransform={"uppercase"}
                   >
@@ -81,13 +82,29 @@ export default function Cart() {
                     {el.title}
                   </Heading>
                   <Stack direction={"row"} align={"center"}>
-                    <Text fontWeight={800} fontSize={"xl"}>
+                    <Text
+                      fontWeight={800}
+                      fontSize={"xl"}
+                      color={"whiteAlpha.400"}
+                    >
                       {el.price}
                     </Text>
-                    <Text textDecoration={"line-through"} color={"gray.600"}>
-                      {el.quantity}
+                    <Text color={"whiteAlpha.400"}>{el.quantity}</Text>
+                    <Text color={"whiteAlpha.400 "} fontSize="xl">
+                      TOTAL VALUE IN CART: {el.price}
                     </Text>
-                    <Button _hover={{ colorScheme: "red" }}>Buy Now</Button>
+                    <RouterLink to="/payment">
+                      <Button
+                        _hover={{ colorScheme: "red" }}
+                        onClick={() => {
+                          window.location.assign(
+                            "http://localhost:3000/payment"
+                          );
+                        }}
+                      >
+                        Buy Now
+                      </Button>
+                    </RouterLink>
                   </Stack>
                 </Stack>
               </Box>
