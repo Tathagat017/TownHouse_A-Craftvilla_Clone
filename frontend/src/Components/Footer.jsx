@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+      bg={"blackAlpha.100"}
       rounded={"full"}
       w={8}
       h={8}
@@ -31,7 +31,7 @@ const SocialButton = ({ children, label, href }) => {
       justifyContent={"center"}
       transition={"background 0.3s ease"}
       _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+        bg: "blackAlpha.200",
       }}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
@@ -50,10 +50,7 @@ const ListHeader = ({ children }) => {
 
 export default function LargeWithNewsletter() {
   return (
-    <Box
-      bg={useColorModeValue("#ffff", "yellow.900")}
-      color={useColorModeValue("gray.700", "gray.200")}
-    >
+    <Box bg={"#ffff"} color={"gray.700"}>
       <Container
         as={Stack}
         maxW={"6xl"}
@@ -74,12 +71,12 @@ export default function LargeWithNewsletter() {
             <Box>
               <Link>
                 <HStack>
-                  <Text style={{ fontSize: "1.2rem", fontStyle: "bold" }}>
+                  <Text style={{ fontSize: "1em", fontStyle: "bold" }}>
                     <span style={{ color: "#e72b76" }}>T</span>own
                     <span style={{ color: "#e72b76" }}>H</span>all
                   </Text>
                   <Image src="./logo.jpg" w="10%"></Image>
-                  <Text style={{ fontSize: "1.2rem", fontStyle: "bold" }}>
+                  <Text style={{ fontSize: "1em", fontStyle: "bold" }}>
                     <span style={{ color: "#e72b76" }}>M</span>arketplace
                   </Text>
                 </HStack>
@@ -120,18 +117,18 @@ export default function LargeWithNewsletter() {
           </Stack>
           <Stack align={"flex-start"}>
             <ListHeader>Stay up to date</ListHeader>
-            <Stack direction={"row"}>
+            <Stack direction={"row"} color="black">
               <Input
+                variant="flushed"
+                borderColor="black"
+                focusable="true"
                 placeholder={"Your email address"}
-                bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+                bg={"whiteAlpha.100"}
                 border={0}
-                _focus={{
-                  bg: "whiteAlpha.300",
-                }}
               />
               <IconButton
-                bg={useColorModeValue("purple.400", "purple.800")}
-                color={useColorModeValue("white", "gray.800")}
+                bg={"purple.400"}
+                color={"black"}
                 _hover={{
                   bg: "green.600",
                 }}

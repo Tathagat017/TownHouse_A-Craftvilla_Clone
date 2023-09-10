@@ -24,6 +24,7 @@ const Navbar = () => {
         boxSizing: "border-box",
         width: "100%",
         margin: "0",
+        color: "black",
       }}
     >
       <Flex

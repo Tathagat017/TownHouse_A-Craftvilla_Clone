@@ -114,9 +114,8 @@ export default function Product({ category }) {
   }
 
   return (
-    <div style={{ background: "white", color: "black" }}>
+    <div style={{ background: "white", color: "#0b0b0b" }}>
       <NavBar />
-      <Simple />
       <Flex>
         <SideFilter />
         <VStack>

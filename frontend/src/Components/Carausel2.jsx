@@ -62,16 +62,16 @@ export const Crousel2 = () => {
         pagination={{ clickable: true }}
         breakpoints={{
           220: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 25,
           },
           720: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 35,
           },
 
           1200: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 50,
           },
         }}
@@ -80,17 +80,18 @@ export const Crousel2 = () => {
         {arr &&
           arr?.map((item, index) => {
             return (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} style={{ borderRadius: "20px" }}>
                 <div>
                   <img
-                    style={{ cursor: "pointer" }}
+                    style={{
+                      cursor: "pointer",
+                      borderRadius: "20px",
+                      objectFit: "fill",
+                    }}
                     src={item.image}
                     alt={index}
                     onClick={() => navigate("/products")}
                   />
-                  <h2>{item.title}</h2>
-                  <br></br>
-                  <h4>{item.distance}</h4>
                 </div>
               </SwiperSlide>
             );

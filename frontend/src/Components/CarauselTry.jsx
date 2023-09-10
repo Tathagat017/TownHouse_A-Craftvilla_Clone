@@ -99,7 +99,7 @@ export const CrouselTry = () => {
                   >
                     {item.distance}
                   </h4>
-                  <div class="swiper-lazy-preloader"></div>
+                  <div className="swiper-lazy-preloader"></div>
                 </div>
               </SwiperSlide>
             );

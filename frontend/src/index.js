@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
+import { ColorModeScript } from "@chakra-ui/react";
 import AuthContextProvider from "./Components/Context";
 import theme from "./chakra-theme";
 import CartContextProvider from "./Components/CartContext";
@@ -14,6 +15,7 @@ root.render(
     <CartContextProvider>
       <AuthContextProvider>
         <ChakraProvider theme={theme}>
+          <ColorModeScript initialColorMode={"light"} />
           <App />
         </ChakraProvider>
       </AuthContextProvider>

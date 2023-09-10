@@ -25,7 +25,7 @@ const Links = [
   },
   {
     label: "BEAUTY",
-    subLinks: ["Makeup", "Skincare", "Fragrance"],
+    subLinks: ["Makeup", "Skin", "Hair"],
   },
   {
     label: "HOME DECOR",
@@ -49,7 +49,7 @@ const Links = [
   },
   {
     label: "OFFERS",
-    subLinks: ["Buy 1 Get 1", "50% off"],
+    subLinks: ["70% off", "50% off"],
   },
   {
     label: "PRODUCTS NEAR ME",
@@ -113,7 +113,7 @@ export default function Simple() {
 
   return (
     <>
-      <Box bg={useColorModeValue("whiteAlpha.50", "blackAlpha.100")} px={4}>
+      <Box bg={"whiteAlpha.50"} px={4}>
         <Flex
           h={16}
           alignItems={"center"}
@@ -130,7 +130,7 @@ export default function Simple() {
 
           <HStack
             as={"nav"}
-            spacing={"5"}
+            spacing={"auto"}
             display={{ base: "none", md: "flex" }}
             color="blackAlpha.900"
             backdropBlur="3xl"
