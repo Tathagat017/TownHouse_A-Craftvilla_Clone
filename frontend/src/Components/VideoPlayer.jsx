@@ -1,5 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player/lazy";
+import thumbnailImage from "../Assets/levis_deepika.jpg";
 
 const VideoPlayerComponent = () => {
   return (
@@ -21,7 +22,7 @@ const VideoPlayerComponent = () => {
         url="https://youtu.be/elAHWOZXfac?si=h_OtQbXX12n17sQV"
         loop={true}
         playing={true}
-        light={true}
+        // light={thumbnailImage}
       ></ReactPlayer>
     </div>
   );

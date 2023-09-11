@@ -80,15 +80,13 @@ export default function Home() {
             backgroundColor: "#ffff",
           }}
         >
-          Fashion Finale
+          Brand Bonanza
         </h1>
         <FashionBannerComponent />
         <br></br>
         <VideoPlayerComponent />
         <br></br>
         <AvailableBrandsComponent />
-        <SellerStaticBanner />
-        <br></br>
         <h1
           style={{
             fontFamily: "Titillium Web",
@@ -101,6 +99,8 @@ export default function Home() {
         >
           How TownHall Marketplace works?
         </h1>
+        <SellerStaticBanner />
+        <br></br>
 
         <SellerInformationComponent />
         <br></br>

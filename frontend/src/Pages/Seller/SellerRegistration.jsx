@@ -1,10 +1,11 @@
 import React from "react";
-import NavBar from "../../Layout/NavBar";
+import SellerNavbar from "./SellerNavbar";
+import { Box } from "@chakra-ui/react";
 const SellerRegisterationComponent = () => {
   return (
-    <div>
-      <NavBar />
-    </div>
+    <Box>
+      <SellerNavbar />
+    </Box>
   );
 };
 

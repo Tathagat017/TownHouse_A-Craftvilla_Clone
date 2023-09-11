@@ -6,6 +6,12 @@ import BrandLogo3 from "../Assets/logo3.webp";
 import BrandLogo4 from "../Assets/logo4.jpg";
 import BrandLogo5 from "../Assets/logo5.webp";
 import BrandLogo6 from "../Assets/logo6.jpg";
+import BrandLogo7 from "../Assets/logo7.jpg";
+import BrandLogo8 from "../Assets/logo8.jpg";
+import BrandLogo9 from "../Assets/logo9.jpg";
+import BrandLogo10 from "../Assets/logo10.jpg";
+import BrandLogo11 from "../Assets/logo11.webp";
+import BrandLogo12 from "../Assets/logo12.jpg";
 const brandLogos = [
   BrandLogo1, // Add your image URLs here
   BrandLogo2,
@@ -13,6 +19,12 @@ const brandLogos = [
   BrandLogo4,
   BrandLogo5,
   BrandLogo6,
+  BrandLogo7,
+  BrandLogo8,
+  BrandLogo9,
+  BrandLogo10,
+  BrandLogo11,
+  BrandLogo12,
 ];
 
 const AvailableBrandsComponent = () => {
