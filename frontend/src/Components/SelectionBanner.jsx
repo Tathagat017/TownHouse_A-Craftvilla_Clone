@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Box,
   Flex,
@@ -18,6 +18,9 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import "./SelectionBanner.css";
+import "aos/dist/aos.css";
+import AOS from "aos";
+
 const Links = [
   {
     label: "FASHION",
@@ -59,52 +62,66 @@ const Links = [
 
 const NavLink = ({ children, subLinks, responsiveFontSize }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  useEffect(() => {
+    AOS.init({ delay: 100, duration: 500 }); // Initialize AOS with your preferred options
+  }, []);
   return (
-    <Box position="relative" display="inline-block">
-      <Link
-        px={2}
-        py={1}
-        rounded={"md"}
-        _hover={{
-          textDecoration: "underline 2.5px",
-          textDecorationColor: "#e72b76",
-          textUnderlineOffset: "15px",
-          bg: "#ffffff",
-        }}
-        href={"#"}
-        fontSize={responsiveFontSize} // Responsive font size
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
-      >
-        {children}
-      </Link>
-      {isOpen && (
-        <Box
-          position="absolute"
-          mt="1"
-          p="2"
-          bg="white"
-          shadow="md"
-          rounded="md"
-          zIndex="5"
-          w="100%"
+    <div onMouseLeave={() => setIsOpen(false)}>
+      <Box position="relative" display="inline-block">
+        <Link
+          px={2}
+          py={1}
+          rounded={"sm"}
+          _hover={{
+            textDecoration: "underline 2.5px",
+            textDecorationColor: "#e72b76",
+            textUnderlineOffset: "15px",
+            bg: "#ffffff",
+          }}
+          href={"#"}
+          fontSize={responsiveFontSize} // Responsive font size
           onMouseEnter={() => setIsOpen(true)}
-          onMouseLeave={() => setIsOpen(false)}
+          transition="all 1s ease" // Add a smooth transition effect
+          transform="translateY(5px)"
         >
-          {subLinks.map((subLink) => (
-            <Link
-              key={subLink}
-              display="block"
-              py="1"
-              _hover={{ bg: "gray.100" }}
-            >
-              {subLink}
-            </Link>
-          ))}
-        </Box>
-      )}
-    </Box>
+          {children}
+        </Link>
+        {isOpen && (
+          <Box
+            position="absolute"
+            p="2"
+            bg="white"
+            shadow="md"
+            rounded="sm"
+            zIndex="5"
+            w="100%"
+            onMouseEnter={() => setIsOpen(true)}
+            data-aos="fade-zoom-in"
+            // data-aos-easing="linear"
+            data-aos-duration="800"
+          >
+            {subLinks.map((subLink) => (
+              <Link
+                key={subLink}
+                display="block"
+                py="1"
+                _hover={{
+                  // bg: "#8EC5FC",
+
+                  // backgroundImage:
+                  //   "linear-gradient(62deg, #8ebffc 0%, #fcc3f8 100%)",
+                  textDecoration: "underline 2px #de48d4",
+                  transform: "scale(1.2)",
+                  cursor: "pointer",
+                }}
+              >
+                {subLink}
+              </Link>
+            ))}
+          </Box>
+        )}
+      </Box>
+    </div>
   );
 };
 
@@ -113,10 +130,11 @@ export default function Simple() {
 
   return (
     <>
-      <Box bg={"whiteAlpha.50"} px={4}>
+      <Box bg={"white"} px={4} mt={-4}>
         <Flex
           h={16}
           alignItems={"center"}
+          W
           justifyContent={"space-between"}
           margin="auto"
         >

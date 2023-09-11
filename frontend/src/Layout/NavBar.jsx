@@ -11,9 +11,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { FaSearch, FaUser, FaShoppingCart, FaHeart } from "react-icons/fa";
-import Simple from "./SelectionBanner.jsx";
+import Simple from "../Components/SelectionBanner.jsx";
 import { Link } from "react-router-dom";
 import "@fontsource/titillium-web/400.css";
+import webisiteLogo from "../Assets/Website-Logo/testLogo7.jpg";
 const Navbar = () => {
   return (
     <div
@@ -28,7 +29,7 @@ const Navbar = () => {
       }}
     >
       <Flex
-        bg="whiteAlpha.800"
+        bg="white"
         p="2"
         alignItems="center"
         flexWrap="wrap" // Allow items to wrap when the screen is narrow
@@ -42,16 +43,14 @@ const Navbar = () => {
           fontFamily="Titillium Web"
         >
           <Link>
-            <HStack>
-              <Text style={{ fontSize: "1.2rem", fontStyle: "bold" }}>
+            {/* <Text style={{ fontSize: "1.2rem", fontStyle: "bold" }}>
                 <span style={{ color: "#e72b76" }}>T</span>own
                 <span style={{ color: "#e72b76" }}>H</span>all
-              </Text>
-              <Image src="./logo.jpg" w="10%"></Image>
-              <Text style={{ fontSize: "1.2rem", fontStyle: "bold" }}>
+              </Text> */}
+            <Image src={webisiteLogo} w="40%"></Image>
+            {/* <Text style={{ fontSize: "1.2rem", fontStyle: "bold" }}>
                 <span style={{ color: "#e72b76" }}>M</span>arketplace
-              </Text>
-            </HStack>
+              </Text> */}
           </Link>
         </Box>
 
@@ -75,42 +74,66 @@ const Navbar = () => {
             <Menu>
               <MenuButton
                 as={Box}
+                rounded={"sm"}
                 p="2"
-                _hover={{ bg: "#edbdd0", cursor: "pointer" }}
+                _hover={{
+                  bg: "#FA8BFF",
+
+                  backgroundImage:
+                    "linear-gradient(225deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%)",
+
+                  transform: "scale(1.1)",
+                  cursor: "pointer",
+                }}
+                fontFamily="Titillium Web"
               >
                 SELLER ZONE
               </MenuButton>
               <MenuList>
-                <MenuItem>Login</MenuItem>
-                <MenuItem>New Seller Register</MenuItem>
+                <MenuItem fontFamily="Titillium Web">Login</MenuItem>
+                <MenuItem fontFamily="Titillium Web">
+                  New Seller Register
+                </MenuItem>
               </MenuList>
             </Menu>
           </HStack>
           <Menu>
-            <MenuButton as={Box} p="2" _hover={{ cursor: "pointer" }}>
+            <MenuButton
+              as={Box}
+              p="2"
+              _hover={{ transform: "scale(1.1)", cursor: "pointer" }}
+            >
               <FaUser />
             </MenuButton>
             <MenuList>
-              <MenuItem>Profile</MenuItem>
-              <MenuItem>Logout</MenuItem>
+              <MenuItem fontFamily="Titillium Web">Profile</MenuItem>
+              <MenuItem fontFamily="Titillium Web">Logout</MenuItem>
             </MenuList>
           </Menu>
           <Menu>
-            <MenuButton as={Box} p="2" _hover={{ cursor: "pointer" }}>
+            <MenuButton
+              as={Box}
+              p="2"
+              _hover={{ transform: "scale(1.1)", cursor: "pointer" }}
+            >
               <FaShoppingCart />
             </MenuButton>
             <MenuList>
-              <MenuItem>Cart</MenuItem>
-              <MenuItem>Checkout</MenuItem>
+              <MenuItem fontFamily="Titillium Web">Cart</MenuItem>
+              <MenuItem fontFamily="Titillium Web">Checkout</MenuItem>
             </MenuList>
           </Menu>
           <Menu>
-            <MenuButton as={Box} p="2" _hover={{ cursor: "pointer" }}>
+            <MenuButton
+              as={Box}
+              p="2"
+              _hover={{ transform: "scale(1.1)", cursor: "pointer" }}
+            >
               <FaHeart />
             </MenuButton>
             <MenuList>
-              <MenuItem>Wishlist</MenuItem>
-              <MenuItem>Notifications</MenuItem>
+              <MenuItem fontFamily="Titillium Web">Wishlist</MenuItem>
+              <MenuItem fontFamily="Titillium Web">Notifications</MenuItem>
             </MenuList>
           </Menu>
 

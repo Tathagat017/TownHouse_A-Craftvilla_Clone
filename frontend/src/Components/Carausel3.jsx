@@ -52,10 +52,17 @@ export default function Carausel3() {
               <SwiperSlide key={index}>
                 <div>
                   <img
-                    style={{ cursor: "pointer", width: "auto" }}
+                    style={{
+                      cursor: "pointer",
+                      width: "auto",
+                      objectFit: "fill",
+                      width: "100%",
+                      minHeight: "300px",
+                    }}
                     src={item}
                     alt={index}
                     onClick={() => navigate("/products")}
+                    objectFit="fill"
                   />
                 </div>
               </SwiperSlide>

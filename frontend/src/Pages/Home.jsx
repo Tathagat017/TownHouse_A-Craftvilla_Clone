@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "./../Components/NavBar";
+import NavBar from "../Layout/NavBar";
 import Simple from "../Components/SelectionBanner";
 import CaptionCarousel from "./../Components/Carausel";
 import LargeWithNewsletter from "./../Components/Footer";
@@ -19,7 +19,17 @@ import "@fontsource/kaushan-script/400.css";
 import "@fontsource/titillium-web/600.css";
 export default function Home() {
   return (
-    <div style={{ background: "#e5e7e9", textAlign: "center" }}>
+    <div
+      style={{
+        textAlign: "center",
+        // backgroundColor: "#ffffff",
+        // backgroundImage: "linear-gradient(180deg, #67dffa 0%, #B721FF 100%)",
+
+        backgroundColor: "#FA8BFF",
+        backgroundImage:
+          "linear-gradient(225deg, #FA8BFF 0%, #3decf8 52%, #2BFF88 90%)",
+      }}
+    >
       <NavBar />
       {/* <Simple /> */}
       {/* <Carousel />*/}
@@ -76,6 +86,20 @@ export default function Home() {
         <br></br>
         <AvailableBrandsComponent />
         <SellerStaticBanner />
+        <br></br>
+        <h1
+          style={{
+            fontFamily: "Titillium Web",
+            fontSize: "1.3rem",
+            listStyle: "inside",
+            marginBottom: "2%",
+            fontStyle: "Bold",
+            backgroundColor: "#ffff",
+          }}
+        >
+          How TownHall Marketplace works?
+        </h1>
+
         <SellerInformationComponent />
         <br></br>
         <LargeWithNewsletter />

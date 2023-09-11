@@ -1,7 +1,7 @@
 import React, { useState, useReducer, useContext, useEffect } from "react";
 import { UserCard, ProductCard } from "react-ui-cards";
 import SideFilter from "../Components/SideFilter";
-import NavBar from "./../Components/NavBar";
+import NavBar from "../Layout/NavBar";
 import Simple from "./../Components/SelectionBanner";
 import LargeWithNewsletter from "./../Components/Footer";
 import TopFilterPanel from "./../Components/TopFilterPanel";

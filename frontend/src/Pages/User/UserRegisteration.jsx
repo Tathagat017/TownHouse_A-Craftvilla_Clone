@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect, useContext } from "react";
 import { Link as RouterLink, Navigate, useNavigate } from "react-router-dom";
-import { authContext } from "../Components/Context";
+import { authContext } from "../../Components/Context";
 import axios from "axios";
 import {
   Flex,
@@ -20,8 +20,8 @@ import {
 } from "@chakra-ui/react";
 
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import LargeWithNewsletter from "./../Components/Footer";
-import NavBar from "./../Components/NavBar";
+import LargeWithNewsletter from "../../Components/Footer";
+import NavBar from "../../Layout/NavBar";
 
 export default function NewUser() {
   const [email, setEmail] = useState("");

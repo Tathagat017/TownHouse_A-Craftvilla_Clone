@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { PaymentCard } from "react-ui-cards";
-import NavBar from "./NavBar";
+import NavBar from "../Layout/NavBar";
 import LargeWithNewsletter from "./Footer";
 import { Button } from "@chakra-ui/button";
 import { useToast } from "@chakra-ui/react";

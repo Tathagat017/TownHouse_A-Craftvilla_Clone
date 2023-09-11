@@ -77,7 +77,7 @@ export const PopularDestinationComponent = () => {
             overflow="hidden" // Hide overflowing content
             boxShadow="xl" // Add shadow
             position="relative" // Position for overlay text
-            transition="transform 0.3s ease-in-out" // Transition effect for transform
+            transition="transform 0.4s ease-in-out" // Transition effect for transform
             _hover={{ transform: "rotateY(180deg)" }} // Flip effect on hover
           >
             <Image
@@ -97,17 +97,21 @@ export const PopularDestinationComponent = () => {
               transform="translate(-50%, -50%)" // Center text vertically and horizontally
             ></VStack>
           </Box>
-          <Text
-            fontSize="1em"
-            color="black"
-            style={{
-              textTransform: "capitalize",
-              fontFamily: "PT Sans",
-              textTransform: "capitalize",
-            }}
-          >
-            {destination.label}
-          </Text>
+          <Box border="1px solid white" bg="aliceblue" rounded="md" mt="2%">
+            <Text
+              fontSize="1.1em"
+              color="black"
+              style={{
+                textTransform: "capitalize",
+                fontFamily: "Lexend Deca",
+                textTransform: "capitalize",
+
+                color: "#363333",
+              }}
+            >
+              {destination.label}
+            </Text>
+          </Box>
         </GridItem>
       ))}
     </Grid>

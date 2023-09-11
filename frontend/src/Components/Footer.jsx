@@ -16,6 +16,7 @@ import { ReactNode } from "react";
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
 import { Link } from "react-router-dom";
+import webisiteLogo from "../Assets/Website-Logo/testLogo7.jpg";
 const SocialButton = ({ children, label, href }) => {
   return (
     <chakra.button
@@ -71,14 +72,16 @@ export default function LargeWithNewsletter() {
             <Box>
               <Link>
                 <HStack>
-                  <Text style={{ fontSize: "1em", fontStyle: "bold" }}>
-                    <span style={{ color: "#e72b76" }}>T</span>own
-                    <span style={{ color: "#e72b76" }}>H</span>all
-                  </Text>
-                  <Image src="./logo.jpg" w="10%"></Image>
-                  <Text style={{ fontSize: "1em", fontStyle: "bold" }}>
-                    <span style={{ color: "#e72b76" }}>M</span>arketplace
-                  </Text>
+                  <Link>
+                    {/* <Text style={{ fontSize: "1.2rem", fontStyle: "bold" }}>
+                <span style={{ color: "#e72b76" }}>T</span>own
+                <span style={{ color: "#e72b76" }}>H</span>all
+              </Text> */}
+                    <Image src={webisiteLogo} w="50%"></Image>
+                    {/* <Text style={{ fontSize: "1.2rem", fontStyle: "bold" }}>
+                <span style={{ color: "#e72b76" }}>M</span>arketplace
+              </Text> */}
+                  </Link>
                 </HStack>
               </Link>
             </Box>

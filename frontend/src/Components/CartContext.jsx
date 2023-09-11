@@ -1,6 +1,6 @@
 import React from "react";
 import { createContext, useState } from "react";
-import Wishlist from "./../Pages/Wishlist";
+import Wishlist from "../Pages/User/UserWishlist";
 
 export const cartContext = createContext();
 

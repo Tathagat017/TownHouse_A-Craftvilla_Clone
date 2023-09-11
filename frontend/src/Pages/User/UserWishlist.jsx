@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { cartContext } from "../Components/CartContext";
+import { cartContext } from "../../Components/CartContext";
 import {
   Box,
   Center,

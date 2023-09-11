@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link as RouterLink, Navigate, useNavigate } from "react-router-dom";
-import { authContext } from "../Components/Context";
+import { authContext } from "../../Components/Context";
 
-import NavBar from "./../Components/NavBar";
-import LargeWithNewsletter from "./../Components/Footer";
+import NavBar from "../../Layout/NavBar";
+import LargeWithNewsletter from "../../Components/Footer";
 import {
   Flex,
   Box,

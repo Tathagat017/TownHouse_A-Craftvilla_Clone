@@ -14,7 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
-import NavBar from "./../Components/NavBar";
+import NavBar from "../Layout/NavBar";
 import LargeWithNewsletter from "./../Components/Footer";
 import { cartContext } from "../Components/CartContext";
 import { useToast } from "@chakra-ui/react";
