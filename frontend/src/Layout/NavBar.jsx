@@ -14,7 +14,7 @@ import { FaSearch, FaUser, FaShoppingCart, FaHeart } from "react-icons/fa";
 import Simple from "../Components/SelectionBanner.jsx";
 import { Link } from "react-router-dom";
 import "@fontsource/titillium-web/400.css";
-import webisiteLogo from "../Assets/Website-Logo/testLogo7.jpg";
+import webisiteLogo from "../Assets/Website-Logo/testLogo8.jpg";
 const Navbar = () => {
   return (
     <div

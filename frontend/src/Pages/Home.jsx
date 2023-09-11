@@ -14,7 +14,7 @@ import SellerStaticBanner from "./../Components/SellerStaticBanner";
 import AvailableBrandsComponent from "./../Components/AvailableBrands";
 
 import SellerInformationComponent from "./../Components/SellerStepsInformation";
-
+import VideoPlayerComponent from "./../Components/VideoPlayer";
 import "@fontsource/kaushan-script/400.css";
 import "@fontsource/titillium-web/600.css";
 export default function Home() {
@@ -83,6 +83,8 @@ export default function Home() {
           Fashion Finale
         </h1>
         <FashionBannerComponent />
+        <br></br>
+        <VideoPlayerComponent />
         <br></br>
         <AvailableBrandsComponent />
         <SellerStaticBanner />
