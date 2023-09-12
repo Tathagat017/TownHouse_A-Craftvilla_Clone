@@ -21,7 +21,7 @@ const Navbar = () => {
       style={{
         boxShadow:
           "rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px",
-        overflow: "hidden",
+        overflow: "none",
         boxSizing: "border-box",
         width: "100%",
         margin: "0",
@@ -63,7 +63,7 @@ const Navbar = () => {
 
         {/* Icons on the right */}
         <HStack spacing="4">
-          <HStack spacing="4" display={{ base: "none", md: "flex" }}>
+          <HStack spacing="4" display={{ base: "flex", md: "flex" }}>
             <Menu>
               <MenuButton
                 as={Box}

@@ -93,7 +93,7 @@ const NavLink = ({ children, subLinks, responsiveFontSize }) => {
             bg="white"
             shadow="md"
             rounded="sm"
-            zIndex="5"
+            zIndex="50"
             w="100%"
             onMouseEnter={() => setIsOpen(true)}
             data-aos="fade-zoom-in"
