@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { cartContext } from "../../Components/CartContext";
 import NavBar from "../../Layout/NavBar";
-import LargeWithNewsletter from "../../Components/Footer";
+import LargeWithNewsletter from "../../Layout/Footer";
 import {
   Box,
   Center,

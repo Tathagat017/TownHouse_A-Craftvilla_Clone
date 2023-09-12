@@ -8,14 +8,14 @@ import "swiper/css/autoplay";
 import "swiper/css/scrollbar";
 import { useNavigate } from "react-router";
 
-import fashion1 from "../Assets/fashion1.jpg";
-import fashion2 from "../Assets/fashion2.jpg";
-import fashion3 from "../Assets/fashion3.jpg";
-import fashion4 from "../Assets/fashion4.jpg";
-import fashion5 from "../Assets/fashion5.jpg";
-import fashion6 from "../Assets/fashion6.jpg";
-import fashion7 from "../Assets/fashion7.jpg";
-import fashion8 from "../Assets/fashion8.jpg";
+import fashion1 from "../../Assets/fashion1.jpg";
+import fashion2 from "../../Assets/fashion2.jpg";
+import fashion3 from "../../Assets/fashion3.jpg";
+import fashion4 from "../../Assets/fashion4.jpg";
+import fashion5 from "../../Assets/fashion5.jpg";
+import fashion6 from "../../Assets/fashion6.jpg";
+import fashion7 from "../../Assets/fashion7.jpg";
+import fashion8 from "../../Assets/fashion8.jpg";
 const images = [
   // Add your image URLs here
   fashion1,

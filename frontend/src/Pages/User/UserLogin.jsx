@@ -3,7 +3,7 @@ import { Link as RouterLink, Navigate, useNavigate } from "react-router-dom";
 import { authContext } from "../../Components/Context";
 
 import NavBar from "../../Layout/NavBar";
-import LargeWithNewsletter from "../../Components/Footer";
+import LargeWithNewsletter from "../../Layout/Footer";
 import {
   Flex,
   Box,

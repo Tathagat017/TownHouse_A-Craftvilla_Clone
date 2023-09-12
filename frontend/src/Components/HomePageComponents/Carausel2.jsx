@@ -75,18 +75,20 @@ export const Crousel2 = () => {
             spaceBetween: 50,
           },
         }}
+        style={{ margin: "auto", display: "block" }}
       >
         {/* https://images.unsplash.com/photo-1549989476-69a92fa57c36?ixlib=rb-1.2.1&ixi60d=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60 */}
         {arr &&
           arr?.map((item, index) => {
             return (
               <SwiperSlide key={index} style={{ borderRadius: "20px" }}>
-                <div>
+                <div style={{ margin: "auto", display: "block" }}>
                   <img
                     style={{
                       cursor: "pointer",
                       borderRadius: "20px",
                       objectFit: "fill",
+                      width: "100%",
                     }}
                     src={item.image}
                     alt={index}

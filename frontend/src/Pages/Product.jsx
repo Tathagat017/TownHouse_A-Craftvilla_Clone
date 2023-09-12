@@ -2,8 +2,8 @@ import React, { useState, useReducer, useContext, useEffect } from "react";
 import { UserCard, ProductCard } from "react-ui-cards";
 import SideFilter from "../Components/SideFilter";
 import NavBar from "../Layout/NavBar";
-import Simple from "./../Components/SelectionBanner";
-import LargeWithNewsletter from "./../Components/Footer";
+
+import LargeWithNewsletter from "../Layout/Footer";
 import TopFilterPanel from "./../Components/TopFilterPanel";
 import { Link as RouterLink } from "react-router-dom";
 import {

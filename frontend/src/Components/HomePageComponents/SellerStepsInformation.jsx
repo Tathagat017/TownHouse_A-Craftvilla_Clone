@@ -1,8 +1,8 @@
 import React from "react";
-import sellerSignupImage from "../Assets/sign-seller.png";
-import sellerProcessImage from "../Assets/process-seller.png";
-import sellerListProductsImage from "../Assets/list-products.png";
-import getPaindImage from "../Assets/GetPaid-seller.png";
+import sellerSignupImage from "../../Assets/sign-seller.png";
+import sellerProcessImage from "../../Assets/process-seller.png";
+import sellerListProductsImage from "../../Assets/list-products.png";
+import getPaindImage from "../../Assets/GetPaid-seller.png";
 import { Grid, GridItem, Box, Image, Text } from "@chakra-ui/react";
 
 const SellerInfoImages = [

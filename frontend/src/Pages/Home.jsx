@@ -1,110 +1,77 @@
 import React from "react";
 import NavBar from "../Layout/NavBar";
-import Simple from "../Components/SelectionBanner";
-import CaptionCarousel from "./../Components/Carausel";
-import LargeWithNewsletter from "./../Components/Footer";
-import { Crousel2 } from "./../Components/Carausel2";
-import { CrouselTry } from "./../Components/CarauselTry";
-import Carausel3 from "../Components/Carausel3";
-import StaticImageBanner from "./../Components/ImageBanner";
-import SimpleImage from "./../Components/SimpleImages";
-import { PopularDestinationComponent } from "./../Components/PopularDestinationBanner.jsx";
-import FashionBannerComponent from "./../Components/FashionBanner";
-import SellerStaticBanner from "./../Components/SellerStaticBanner";
-import AvailableBrandsComponent from "./../Components/AvailableBrands";
+import Simple from "../Components/HomePageComponents/SelectionBanner";
+import CaptionCarousel from "../Components/HomePageComponents/CarauselHandicraft";
+import LargeWithNewsletter from "../Layout/Footer";
+import { Crousel2 } from "../Components/HomePageComponents/Carausel2";
+import { CrouselTry } from "../Components/HomePageComponents/CarauselTry";
+import Carausel3 from "../Components/HomePageComponents/Carausel3";
+import CarauselHandicraft from "../Components/HomePageComponents/CarauselHandicraft";
+import StaticImageBanner from "../Components/HomePageComponents/ImageBanner";
+import SimpleImage from "../Components/HomePageComponents/SimpleImages";
+import { PopularDestinationComponent } from "../Components/HomePageComponents/PopularDestinationBanner.jsx";
+import FashionBannerComponent from "../Components/HomePageComponents/FashionBanner";
+import SellerStaticBanner from "../Components/HomePageComponents/SellerStaticBanner";
+import AvailableBrandsComponent from "./../Components/HomePageComponents/AvailableBrands";
+import SellerInformationComponent from "../Components/HomePageComponents/SellerStepsInformation";
+import VideoPlayerComponent from "../Components/HomePageComponents/VideoPlayer";
+import CategoryHeading from "./../Components/HomePageComponents/CategoryHeading";
+import DividerLine from "../Components/HomePageComponents/DividerLine";
 
-import SellerInformationComponent from "./../Components/SellerStepsInformation";
-import VideoPlayerComponent from "./../Components/VideoPlayer";
 import "@fontsource/kaushan-script/400.css";
 import "@fontsource/titillium-web/600.css";
+
+import styles from "./Home.module.css"; // Import the CSS module
+
 export default function Home() {
   return (
-    <div
-      style={{
-        textAlign: "center",
-        // backgroundColor: "#ffffff",
-        // backgroundImage: "linear-gradient(180deg, #67dffa 0%, #B721FF 100%)",
-
-        backgroundColor: "#FA8BFF",
-        backgroundImage:
-          "linear-gradient(225deg, #FA8BFF 0%, #3decf8 52%, #2BFF88 90%)",
-      }}
-    >
+    <div className={styles.container}>
       <NavBar />
-      {/* <Simple /> */}
-      {/* <Carousel />*/}
       <div style={{ padding: "1.2rem" }}>
-        <CrouselTry />
-        <br></br>
-        <h1
-          style={{
-            fontFamily: "Titillium Web",
-            fontSize: "1.3rem",
-            listStyle: "inside",
-            fontStyle: "Bold",
-            backgroundColor: "white",
-          }}
-        >
-          Handcrafted Categories
-        </h1>
-        <br></br>
-        <Crousel2 />
-        <br></br>
-        <Carausel3 />
-        <br></br>
-        <SimpleImage />
-        <br></br>
-        <h1
-          style={{
-            fontFamily: "Titillium Web",
-            fontSize: "1.3rem",
-            listStyle: "inside",
-            marginBottom: "2%",
-            fontStyle: "Bold",
-            backgroundColor: "#ffff",
-          }}
-        >
-          Digital World
-        </h1>
+        <div className={styles.section}>
+          <CrouselTry />
+        </div>
+        <CategoryHeading text={"Handcrafted And Antiques"} />
+        <div className={styles.section}>
+          <Crousel2 />
+        </div>
+        <div className={styles.section}>
+          <Carausel3 />
+        </div>
+        <div className={styles.section}>
+          <SimpleImage />
+        </div>
+        <div className={styles.section}>
+          <CarauselHandicraft />
+        </div>
+        <CategoryHeading text={"Digital World"} />
         <PopularDestinationComponent />
-        <br></br>
-        <StaticImageBanner />
-        <br></br>
-        <h1
-          style={{
-            fontFamily: "Titillium Web",
-            fontSize: "1.3rem",
-            listStyle: "inside",
-            marginBottom: "2%",
-            fontStyle: "Bold",
-            backgroundColor: "#ffff",
-          }}
-        >
-          Brand Bonanza
-        </h1>
-        <FashionBannerComponent />
-        <br></br>
-        <VideoPlayerComponent />
-        <br></br>
-        <AvailableBrandsComponent />
-        <h1
-          style={{
-            fontFamily: "Titillium Web",
-            fontSize: "1.3rem",
-            listStyle: "inside",
-            marginBottom: "2%",
-            fontStyle: "Bold",
-            backgroundColor: "#ffff",
-          }}
-        >
-          How TownHall Marketplace works?
-        </h1>
-        <SellerStaticBanner />
-        <br></br>
-
-        <SellerInformationComponent />
-        <br></br>
-        <LargeWithNewsletter />
+        <div className={styles.section}>
+          <StaticImageBanner />
+        </div>
+        <div className={styles.section}>
+          <CategoryHeading text={"Brand Bonanza"} />
+        </div>
+        <div className={styles.section}>
+          <FashionBannerComponent />
+        </div>
+        <div className={styles.section}>
+          <VideoPlayerComponent />
+        </div>
+        <div className={styles.section}>
+          <AvailableBrandsComponent />
+        </div>
+        <CategoryHeading text={"Join us to sell everywhere !"} />
+        <div className={styles.section}>
+          <SellerStaticBanner />
+        </div>
+        <CategoryHeading text={"Simple steps to sell on TownHall"} />
+        <div className={styles.section}>
+          <SellerInformationComponent />
+        </div>
+        <div className={styles.section}>
+          <LargeWithNewsletter />
+        </div>
       </div>
     </div>
   );

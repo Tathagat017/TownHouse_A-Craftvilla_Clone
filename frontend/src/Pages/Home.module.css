@@ -1,0 +1,15 @@
+/* Home.module.css */
+.container {
+  text-align: center;
+  background-color: #fa8bff;
+  background-image: linear-gradient(
+    225deg,
+    #fa8bff 0%,
+    #3decf8 52%,
+    #2bff88 90%
+  );
+}
+
+.section {
+  margin-bottom: 1.3rem;
+}

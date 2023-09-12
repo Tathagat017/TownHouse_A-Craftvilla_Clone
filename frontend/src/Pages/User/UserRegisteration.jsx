@@ -20,7 +20,7 @@ import {
 } from "@chakra-ui/react";
 
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import LargeWithNewsletter from "../../Components/Footer";
+import LargeWithNewsletter from "../../Layout/Footer";
 import NavBar from "../../Layout/NavBar";
 
 export default function NewUser() {

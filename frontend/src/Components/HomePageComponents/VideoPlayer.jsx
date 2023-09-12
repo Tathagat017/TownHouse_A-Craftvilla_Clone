@@ -1,6 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player/lazy";
-import thumbnailImage from "../Assets/levis_deepika.jpg";
+import thumbnailImage from "../../Assets/levis_deepika.jpg";
 
 const VideoPlayerComponent = () => {
   return (

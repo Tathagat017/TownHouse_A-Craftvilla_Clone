@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { Grid, GridItem, Box, Text, Image, VStack } from "@chakra-ui/react";
-import watchImage from "../Assets/watch.jpg";
-import jewelsImage from "../Assets/jewellery.jpg";
-import TabletImage from "../Assets/tablet.webp";
-import TabletImage2 from "../Assets/tablet2.jpg";
-import WearableImage from "../Assets/wearable.webp";
-import jewelsImage2 from "../Assets/jewellery2.jpg";
-import MobileImage from "../Assets/mobile.jpg";
-import headphonesImage from "../Assets/headphones.jpg";
-import PlayStationImage from "../Assets/playstation.jpg";
-import ConsoleImage from "../Assets/Games.jpg";
-import TelevisionsImage from "../Assets/television.webp";
-import speakerImage from "../Assets/speakers.png";
-import speakerImage2 from "../Assets/speakers2.jpg";
-import MonitorImage2 from "../Assets/monitor2.webp";
-import DroneImage from "../Assets/drones.jpg";
-import ToysImage from "../Assets/toys.jpg";
+import watchImage from "../../Assets//watch.jpg";
+import jewelsImage from "../../Assets/jewellery.jpg";
+import TabletImage from "../../Assets/tablet.webp";
+import TabletImage2 from "../../Assets/tablet2.jpg";
+import WearableImage from "../../Assets/wearable.webp";
+import jewelsImage2 from "../../Assets/jewellery2.jpg";
+import MobileImage from "../../Assets/mobile.jpg";
+import headphonesImage from "../../Assets/headphones.jpg";
+import PlayStationImage from "../../Assets/playstation.jpg";
+import ConsoleImage from "../../Assets/Games.jpg";
+import TelevisionsImage from "../../Assets/television.webp";
+import speakerImage from "../../Assets/speakers.png";
+import speakerImage2 from "../../Assets/speakers2.jpg";
+import MonitorImage2 from "../../Assets/monitor2.webp";
+import DroneImage from "../../Assets/drones.jpg";
+import ToysImage from "../../Assets/toys.jpg";
 export const PopularDestinationComponent = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 

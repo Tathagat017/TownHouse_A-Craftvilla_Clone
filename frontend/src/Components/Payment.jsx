@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { PaymentCard } from "react-ui-cards";
 import NavBar from "../Layout/NavBar";
-import LargeWithNewsletter from "./Footer";
+import LargeWithNewsletter from "../Layout/Footer";
 import { Button } from "@chakra-ui/button";
 import { useToast } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";

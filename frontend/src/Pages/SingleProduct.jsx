@@ -15,7 +15,7 @@ import {
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
 import NavBar from "../Layout/NavBar";
-import LargeWithNewsletter from "./../Components/Footer";
+import LargeWithNewsletter from "../Layout/Footer";
 import { cartContext } from "../Components/CartContext";
 import { useToast } from "@chakra-ui/react";
 function SingleProduct() {
