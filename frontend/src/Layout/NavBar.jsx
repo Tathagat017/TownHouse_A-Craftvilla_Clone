@@ -21,7 +21,7 @@ const Navbar = () => {
       style={{
         boxShadow:
           "rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px",
-        // overflow: "hidden",
+        overflow: "hidden",
         boxSizing: "border-box",
         width: "100%",
         margin: "0",
@@ -42,7 +42,7 @@ const Navbar = () => {
           padding="1%"
           fontFamily="Titillium Web"
         >
-          <Link>
+          <Link to="/">
             <Image src={webisiteLogo} w="40%"></Image>
           </Link>
         </Box>
@@ -83,9 +83,11 @@ const Navbar = () => {
                 SELLER ZONE
               </MenuButton>
               <MenuList>
-                <MenuItem fontFamily="Titillium Web">Login</MenuItem>
                 <MenuItem fontFamily="Titillium Web">
-                  New Seller Register
+                  <Link to="/seller/login">Login</Link>
+                </MenuItem>
+                <MenuItem fontFamily="Titillium Web">
+                  <Link to="/seller/register">New Seller Register</Link>
                 </MenuItem>
               </MenuList>
             </Menu>

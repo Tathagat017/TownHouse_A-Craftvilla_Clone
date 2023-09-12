@@ -11,10 +11,10 @@ import {
   Grid,
   GridItem,
   ListItem,
-  OrderedList,
+  UnorderedList,
   ListIcon,
 } from "@chakra-ui/react";
-
+import "@fontsource/titillium-web/400.css";
 import { Link } from "react-router-dom";
 import { MdCheckCircle } from "react-icons/md";
 
@@ -45,9 +45,39 @@ const cardsData = [
 const SellerInfoGraphicsComponent = () => {
   return (
     <VStack flex={{ base: "1", md: "0.5" }}>
-      <Heading as="h4" size="md" mb={4} color={"gray.600"}>
+      <Heading
+        as="h3"
+        size="xl"
+        mb={4}
+        color={"gray.600"}
+        fontFamily="Titillium Web"
+      >
         Grow your business with us!
       </Heading>
+      <VStack
+        justifyContent="center"
+        padding="1rem"
+        style={{
+          backgroundImage: "inear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%)",
+          borderRadius: "15px",
+        }}
+      >
+        <Heading as="h4" size="md" mb={4} color={"gray.600"}>
+          All you need to sell :
+        </Heading>
+
+        <VStack color={"gray.600"}>
+          <Flex justifyContent="space-betweem" alignItems="center">
+            <MdCheckCircle color="green" />
+            <Text fontStyle="Bold" m="1%">
+              GST Number
+            </Text>
+
+            <MdCheckCircle color="green" />
+            <Text m="1%"> Bank Account Number</Text>
+          </Flex>
+        </VStack>
+      </VStack>
       <Box p={4}>
         <Grid
           templateColumns={{
@@ -69,21 +99,6 @@ const SellerInfoGraphicsComponent = () => {
           ))}
         </Grid>
       </Box>
-      <VStack justifyContent="center">
-        <Heading as="h4" size="md" mb={4} color={"gray.600"}>
-          All you need to sell on TownHall is:
-        </Heading>
-        <OrderedList color={"gray.600"}>
-          <ListItem>
-            <ListIcon as={MdCheckCircle} color="green.500" />
-            Bank Account
-          </ListItem>
-          <ListItem>
-            <ListIcon as={MdCheckCircle} color="green.500" />
-            GSTIN Number
-          </ListItem>
-        </OrderedList>
-      </VStack>
     </VStack>
   );
 };

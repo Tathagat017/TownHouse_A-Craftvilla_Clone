@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Flex,
@@ -19,6 +19,28 @@ import webisiteLogo from "../../Assets/Website-Logo/testLogo8.jpg";
 
 const SellerNavbar = () => {
   const isAuthSeller = false;
+  const [showText, setShowText] = useState({});
+  const options = {
+    loginPage: {
+      Buttontext: "Register",
+      text: "Not registered?",
+      link: "register",
+    },
+    registerPage: {
+      Buttontext: "Login",
+      text: "Already Registered?",
+      link: "login",
+    },
+  };
+  useEffect(() => {
+    let path = window.location.pathname;
+    if (path.includes("/seller/login")) {
+      setShowText(options.loginPage);
+    } else if (path.includes("/seller/register")) {
+      setShowText(options.registerPage);
+    }
+    console.log(showText);
+  }, []);
 
   return (
     <Box
@@ -74,9 +96,11 @@ const SellerNavbar = () => {
             ml={{ base: 0, md: "auto" }} // Move left on mobile, right on desktop
           >
             <Text fontFamily="Titillium Web" m={2}>
-              Already a seller?
+              {showText.text}
             </Text>
-            <Button>Login</Button>
+            <Link to={`/seller/${showText.link}`}>
+              <Button> {showText.Buttontext}</Button>
+            </Link>
           </Flex>
         )}
       </Flex>

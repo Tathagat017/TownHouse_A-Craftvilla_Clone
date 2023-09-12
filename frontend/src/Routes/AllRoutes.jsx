@@ -12,6 +12,9 @@ import PrivateRoute from "./PrivateRoute";
 import SingleProduct from "./../Pages/SingleProduct";
 import Payment from "../Components/Payment";
 import SellerRegisterationComponent from "../Pages/Seller/SellerRegistration";
+
+import SellerLoginComponent from "../Pages/Seller/SellerLogin";
+
 export const AllRoutes = () => {
   return (
     <Routes>
@@ -30,6 +33,8 @@ export const AllRoutes = () => {
         path="/seller/register"
         element={<SellerRegisterationComponent />}
       ></Route>
+      <Route path="/seller/login" element={<SellerLoginComponent />}></Route>
+
       <Route path="/Restraunt" element={<Restraunt />}></Route>
       <Route
         path="/Wishlist"

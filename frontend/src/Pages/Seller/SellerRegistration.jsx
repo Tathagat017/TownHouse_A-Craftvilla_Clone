@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+
 import SellerNavbar from "../../Components/SellerComponents/SellerNavbar";
+
 import LargeWithNewsletter from "../../Layout/Footer";
+
 import SellerRegistrationForm from "../../Components/SellerComponents/Registration/SellerRegistrationForm";
 
 import SellerInfoGraphicsComponent from "../../Components/SellerComponents/Registration/SellerRegistrationInfoGraphics";
@@ -10,7 +13,6 @@ import { Box, FormControl, Flex, VStack } from "@chakra-ui/react";
 import styles from "./SellerRegistration.module.css";
 
 const SellerRegisterationComponent = () => {
-  const [showPassword, setShowPassword] = useState(false);
   return (
     <>
       <SellerNavbar />

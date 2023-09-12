@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import {
   Box,
   FormControl,
@@ -14,6 +15,7 @@ import {
   Button,
   InputLeftAddon,
 } from "@chakra-ui/react";
+
 import { Link } from "react-router-dom";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { MdEmail } from "react-icons/md";
@@ -22,10 +24,11 @@ import { RiLockPasswordLine } from "react-icons/ri";
 import Confetti from "react-confetti";
 import "@fontsource/titillium-web/400.css";
 
-const SellerRegistrationForm = () => {
+const SellerLoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isPartyPop, setIsPartyPop] = useState(false);
-  const handleRegisterClick = (e) => {
+
+  const handleLoginClick = (e) => {
     // Your registration logic goes here...
     e.preventDefault();
     console.log("clicked");
@@ -47,7 +50,7 @@ const SellerRegistrationForm = () => {
           color={"gray.600"}
           fontFamily="Titillium Web"
         >
-          Join our fleet of suppliers !
+          Login for sellers !
         </Heading>
         <Text
           fontSize={"md"}
@@ -55,7 +58,7 @@ const SellerRegistrationForm = () => {
           fontFamily="Titillium Web"
           textDecoration={"underline teal"}
         >
-          Become a seller on TownHall
+          Login to TownHall seller account
         </Text>
       </Stack>
       <Box
@@ -67,36 +70,6 @@ const SellerRegistrationForm = () => {
         p={8}
       >
         <Stack spacing={4}>
-          <Box>
-            <FormControl id="SellerName" isRequired>
-              <FormLabel>Seller Name</FormLabel>
-              <Input type="text" placeholder="Enter bussiness name" />
-            </FormControl>
-          </Box>
-          <Box>
-            <FormControl id="PhoneNumber">
-              <FormLabel>Phone Number</FormLabel>
-              <InputGroup>
-                <InputLeftAddon children="+91" />
-                <Input type="tel" placeholder="phone number" />
-              </InputGroup>
-            </FormControl>
-          </Box>
-          <Box>
-            <FormControl id="GSTIN">
-              <FormLabel>GSTIN Number</FormLabel>
-              <InputGroup>
-                <InputLeftAddon children={<TbReceiptTax />} />
-                <Input
-                  type="number"
-                  max={999999999999999}
-                  maxLength={15}
-                  placeholder="GSTIN Number-15 digits"
-                  isrequired
-                />
-              </InputGroup>
-            </FormControl>
-          </Box>
           <FormControl id="email" isRequired>
             <FormLabel>Email address</FormLabel>
             <InputGroup>
@@ -126,7 +99,22 @@ const SellerRegistrationForm = () => {
             </InputGroup>
           </FormControl>
           <Stack spacing={10} pt={2}>
-            {isPartyPop && <Confetti />}
+            {isPartyPop && (
+              <Confetti
+                drawShape={(ctx) => {
+                  ctx.beginPath();
+                  for (let i = 0; i < 22; i++) {
+                    const angle = 0.35 * i;
+                    const x = (0.2 + 1.5 * angle) * Math.cos(angle);
+                    const y = (0.2 + 1.5 * angle) * Math.sin(angle);
+                    ctx.lineTo(x, y);
+                  }
+                  ctx.stroke();
+                  ctx.closePath();
+                }}
+                tweenDuration={2000}
+              />
+            )}
             <Button
               isLoading={false}
               loadingText="Submitting"
@@ -142,17 +130,17 @@ const SellerRegistrationForm = () => {
               }}
               fontFamily="sans-serif"
               onClick={(e) => {
-                handleRegisterClick(e);
+                handleLoginClick(e);
               }}
             >
-              Register
+              Login
             </Button>
           </Stack>
           <Stack pt={6}>
             <Text align={"center"}>
-              Already a seller?{" "}
-              <Link style={{ fontWeight: "bold" }} to="/seller/login">
-                Login
+              Not Registered yet?{" "}
+              <Link style={{ fontWeight: "bold" }} to="/seller/register">
+                Register
               </Link>
             </Text>
           </Stack>
@@ -161,5 +149,4 @@ const SellerRegistrationForm = () => {
     </Stack>
   );
 };
-
-export default SellerRegistrationForm;
+export default SellerLoginForm;
