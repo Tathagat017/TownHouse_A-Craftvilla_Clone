@@ -68,7 +68,20 @@ const SellerRegistrationForm = () => {
               </InputGroup>
             </FormControl>
           </Box>
-
+          <Box>
+            <FormControl id="GSTIN">
+              <FormLabel>GSTIN Number</FormLabel>
+              <InputGroup>
+                <Input
+                  type="number"
+                  max={999999999999999}
+                  maxLength={15}
+                  placeholder="GSTIN Number-15 digits"
+                  isrequired
+                />
+              </InputGroup>
+            </FormControl>
+          </Box>
           <FormControl id="email" isRequired>
             <FormLabel>Email address</FormLabel>
             <InputGroup>
